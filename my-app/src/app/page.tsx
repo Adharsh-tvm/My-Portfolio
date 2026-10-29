@@ -1,74 +1,44 @@
+import Navbar from '@/components/Navbar';
+import Hero from '@/components/Hero';
+import Skills from '@/components/Skills';
+import ProjectsSection from '@/components/ProjectsSection';
+import MiniProjectsSection from '@/components/MiniProjectsSection';
+import EducationSection from '@/components/EducationSection';
+import Contact from '@/components/Contact';
+import Footer from '@/components/Footer';
+import ScrollProgress from '@/components/ui/ScrollProgress';
 
 export default function Home() {
   return (
-    <main className="portfolio">
-      <div className="background-glow" />
+    <div className="relative min-h-screen bg-transparent text-[#121214] dark:text-[#f4f4f6]">
+      {/* Scroll Progress Bar */}
+      <ScrollProgress />
 
-      <div className="hero-content">
-        <p className="eyebrow">
-          FULL STACK DEVELOPER
-        </p>
+      {/* Primary Sticky/Floating Navbar */}
+      <Navbar />
 
-        <h1>
-          Turning ideas
-          <br />
-          into <span>digital reality.</span>
-        </h1>
+      <main>
+        {/* 1. Hero: Oversized Typography, Portrait & Profile Links */}
+        <Hero />
 
-        <p className="description">
-          I design and develop modern web experiences
-          combining clean code, creative thinking, and
-          cutting-edge technology.
-        </p>
+        {/* 2. Skills: Clean Categorized Stack */}
+        <Skills />
 
-        <div className="actions">
-          <a href="#projects" className="primary-btn">
-            Explore My Work ↗
-          </a>
+        {/* 3. Projects: Prominent Full-Stack Featured Project Cards */}
+        <ProjectsSection />
 
-          <a href="mailto:your-email@example.com" className="secondary-btn">
-            Contact Me
-          </a>
-        </div>
+        {/* 4. Mini Projects: Compact Architectural & Focused Applications */}
+        <MiniProjectsSection />
 
-        <div className="tech-stack">
-          <span>React</span>
-          <span>Next.js</span>
-          <span>TypeScript</span>
-          <span>Node.js</span>
-        </div>
-      </div>
+        {/* 5. Education: Professional Training & Academic Credentials */}
+        <EducationSection />
 
-      <div className="visual">
-        <div className="ring ring-one" />
-        <div className="ring ring-two" />
-        <div className="ring ring-three" />
+        {/* 6. Contact: Monumental Direct Call to Action */}
+        <Contact />
+      </main>
 
-        <div className="core">
-          <span>&lt;/&gt;</span>
-        </div>
-
-        <div className="floating-card card-one">
-          <span className="card-icon">✳</span>
-          <div>
-            <strong>Creative</strong>
-            <p>Design & Experience</p>
-          </div>
-        </div>
-
-        <div className="floating-card card-two">
-          <span className="card-icon">⌘</span>
-          <div>
-            <strong>Developer</strong>
-            <p>Ideas into Products</p>
-          </div>
-        </div>
-      </div>
-
-      <div className="bottom-label">
-        <span>PORTFOLIO — 2026</span>
-        <span>SCROLL TO EXPLORE ↓</span>
-      </div>
-    </main>
+      {/* Footer: Understated Copyright & Live Clock */}
+      <Footer />
+    </div>
   );
 }
